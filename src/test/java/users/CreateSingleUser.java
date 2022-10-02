@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Purpose : Class to create a single user. This user can be used for updating the details.
+ */
+
 public class CreateSingleUser {
 
     public User userData = new User();

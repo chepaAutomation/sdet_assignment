@@ -1,8 +1,3 @@
-Total users added : 1
-Total users added : 2
-Total users added : 3
-## Running the test for create users with Array :
-Total users in the inputs request are : 3
 Get connection for route {s}->https://petstore.swagger.io:443
 Connecting to petstore.swagger.io:443
 CookieSpec selected: ignoreCookies
@@ -10,27 +5,27 @@ Auth cache not set in the context
 Target auth state: UNCHALLENGED
 Proxy auth state: UNCHALLENGED
 Attempt 1 to execute request
-Sending request: POST /v2/user/createWithArray HTTP/1.1
- >> "POST /v2/user/createWithArray HTTP/1.1[\r][\n]"
+Sending request: POST /v2/pet HTTP/1.1
+ >> "POST /v2/pet HTTP/1.1[\r][\n]"
  >> "accept: application/json[\r][\n]"
  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
- >> "Content-Length: 508[\r][\n]"
+ >> "Content-Length: 187[\r][\n]"
  >> "Host: petstore.swagger.io[\r][\n]"
  >> "Connection: Keep-Alive[\r][\n]"
  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
  >> "Accept-Encoding: gzip,deflate[\r][\n]"
  >> "[\r][\n]"
->> POST /v2/user/createWithArray HTTP/1.1
+>> POST /v2/pet HTTP/1.1
 >> accept: application/json
 >> Content-Type: application/json; charset=UTF-8
->> Content-Length: 508
+>> Content-Length: 187
 >> Host: petstore.swagger.io
 >> Connection: Keep-Alive
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
- >> "[{"id":101,"username":"testUser1","firstName":"testFirst1","lastName":"testLast1","email":"testuser1@gmail.com","password":"test123","phone":"1234567890","userStatus":0},{"id":102,"username":"testUser2","firstName":"testFirst2","lastName":"testLast2","email":"testuser2@gmail.com","password":"test123","phone":"1234567891","userStatus":0},{"id":103,"username":"testUser3","firstName":"testFirst3","lastName":"testLast3","email":"testuser3@gmail.com","password":"test123","phone":"1234567899","userStatus":0}]"
+ >> "{"id":1111,"name":"Tommy","status":"available","category":{"id":2222,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Sun, 02 Oct 2022 19:55:55 GMT[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:28 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -41,7 +36,7 @@ Sending request: POST /v2/user/createWithArray HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Sun, 02 Oct 2022 19:55:55 GMT
+<< Date: Sun, 02 Oct 2022 21:20:28 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -52,17 +47,924 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "2c[\r][\n]"
- << "{"code":200,"type":"unknown","message":"ok"}"
+ << "bb[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"available"}"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3c0036b
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1eb6e1c
 Connection can be kept alive indefinitely
 {
-    "code": 200,
-    "type": "unknown",
-    "message": "ok"
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "dog"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "available"
 }
-### Verifying the create users API response
-### Verification passed for create users API
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Connecting to petstore.swagger.io:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 185[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 185
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Tommy","status":"pending","category":{"id":2222,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:30 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:30 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b9[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6e0cff20
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "dog"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:30 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:30 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b9[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2a1debfa
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "dog"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 188[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 188
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Tommy","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:30 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:30 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@592238c5
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:31 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:31 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@33b082c5
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 187[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 187
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:31 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:31 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bb[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@35835e65
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:31 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:31 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bb[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7a231dfd
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 188[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 188
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:32 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:32 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@50194e8d
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog1.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:32 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:32 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@73ad4ecc
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog1.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1111"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 188[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 188
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:32 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:32 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@bb9ab64
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog1.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1112"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:32 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:32 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "bc[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"pending"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@45d6ef73
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog1.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1112"
+        }
+    ],
+    "status": "pending"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/pet HTTP/1.1
+ >> "PUT /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 184[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 184
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1111,"name":"Ruby","status":"sold","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:33 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:33 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b8[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@507d20bb
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1112"
+        }
+    ],
+    "status": "sold"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/pet/1111 HTTP/1.1
+ >> "GET /v2/pet/1111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/pet/1111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 21:20:33 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Sun, 02 Oct 2022 21:20:33 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b8[\r][\n]"
+ << "{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@9fec931
+Connection can be kept alive indefinitely
+{
+    "id": 1111,
+    "category": {
+        "id": 2222,
+        "name": "doggie"
+    },
+    "name": "Ruby",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3333,
+            "name": "test_tag_dog_1112"
+        }
+    ],
+    "status": "sold"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API

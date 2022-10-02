@@ -20,7 +20,6 @@ public class UserAPIHelper {
 
     public UserAPIHelper() {
         RestAssured.baseURI = ConfigReader.getApplicationProperties().getProperty("petstore.base.url");
-        System.out.println("base URI is : " + RestAssured.baseURI);
     }
 
     public UsersAPIResponse createUsersAPICall(User[] usersData) {
@@ -89,13 +88,13 @@ public class UserAPIHelper {
 
     public void compareUserDetails(User expectedUsersData, User actualUsersData) {
         LogUtil.getLogger().info("### Verifying the user details after update user details API ");
-        Assert.assertEquals(expectedUsersData.getUsername(), actualUsersData.getUsername());
-        Assert.assertEquals(expectedUsersData.getFirstName(), actualUsersData.getFirstName());
-        Assert.assertEquals(expectedUsersData.getLastName(), actualUsersData.getLastName());
-        Assert.assertEquals(expectedUsersData.getEmail(), actualUsersData.getEmail());
-        Assert.assertEquals(expectedUsersData.getPassword(), actualUsersData.getPassword());
-        Assert.assertEquals(expectedUsersData.getPhone(), actualUsersData.getPhone());
-        Assert.assertEquals(expectedUsersData.getUserStatus(), actualUsersData.getUserStatus());
+        Assert.assertEquals(expectedUsersData.getUsername(), actualUsersData.getUsername(),"mismatch in user name");
+        Assert.assertEquals(expectedUsersData.getFirstName(), actualUsersData.getFirstName(),"mismatch in first name");
+        Assert.assertEquals(expectedUsersData.getLastName(), actualUsersData.getLastName(),"mismatch in last name");
+        Assert.assertEquals(expectedUsersData.getEmail(), actualUsersData.getEmail(),"mismatch in email");
+        Assert.assertEquals(expectedUsersData.getPassword(), actualUsersData.getPassword(),"mismatch in password");
+        Assert.assertEquals(expectedUsersData.getPhone(), actualUsersData.getPhone(),"mismatch in user phone");
+        Assert.assertEquals(expectedUsersData.getUserStatus(), actualUsersData.getUserStatus(),"mismatch in user status");
         LogUtil.getLogger().info("### Verification passed for update users Details");
     }
 
