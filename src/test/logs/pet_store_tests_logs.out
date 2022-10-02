@@ -30,7 +30,7 @@ Sending request: POST /v2/user/createWithArray HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "[{"id":101,"username":"testUser1","firstName":"testFirst1","lastName":"testLast1","email":"testuser1@gmail.com","password":"test123","phone":"1234567890","userStatus":0},{"id":102,"username":"testUser2","firstName":"testFirst2","lastName":"testLast2","email":"testuser2@gmail.com","password":"test123","phone":"1234567891","userStatus":0},{"id":103,"username":"testUser3","firstName":"testFirst3","lastName":"testLast3","email":"testuser3@gmail.com","password":"test123","phone":"1234567899","userStatus":0}]"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Sun, 02 Oct 2022 18:14:00 GMT[\r][\n]"
+ << "Date: Sun, 02 Oct 2022 19:55:55 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -41,7 +41,7 @@ Sending request: POST /v2/user/createWithArray HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Sun, 02 Oct 2022 18:14:00 GMT
+<< Date: Sun, 02 Oct 2022 19:55:55 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -57,12 +57,12 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@25a73de1
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3c0036b
 Connection can be kept alive indefinitely
 {
     "code": 200,
     "type": "unknown",
     "message": "ok"
 }
-Verifying the create users API response - 
-Verification passed for create users API
+### Verifying the create users API response
+### Verification passed for create users API

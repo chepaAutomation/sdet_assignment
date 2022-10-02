@@ -3,11 +3,10 @@ package users;
 import common.Constants;
 import common.users.User;
 import common.users.UsersAPIResponse;
-import io.restassured.response.Response;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import services.CreateUsers;
+import services.UserAPIHelper;
 import utils.ExcelUtils;
 import utils.LogUtil;
 
@@ -28,7 +27,7 @@ public class CreateUsersTest {
     String testDataFileLocation = Constants.PET_STORE_TEST_DATA_FILE;
     String createUsersTestDataSheetName = Constants.CREATE_MULTI_USERS_SHEET_NAME;
     public User userData = null;
-    CreateUsers usersAPI = new CreateUsers();
+    UserAPIHelper usersAPI = new UserAPIHelper();
 
     private static List<User> usersList = new ArrayList<>();
     private User[] userArray = null;
@@ -36,7 +35,7 @@ public class CreateUsersTest {
     @Test(dataProvider = "createUsersTestData")
     public void prepareUsersDataArray(Map inputTestData) {
         userData = new User();
-        fillUsersData(inputTestData);
+        userData = usersAPI.fillUsersData(inputTestData, userData);
         usersList.add(userData);
         LogUtil.getLogger().info("Total users added : " + usersList.size());
     }
@@ -57,17 +56,6 @@ public class CreateUsersTest {
     public Object[][] createUsersTestData() throws IOException, InvalidFormatException {
         Object[][] testData = excelUtils.dataReaderInMap(testDataFileLocation, createUsersTestDataSheetName);
         return testData;
-    }
-
-    public void fillUsersData(Map apiInputData) {
-        userData.setId(Integer.parseInt(apiInputData.get("id").toString()));
-        userData.setUsername(apiInputData.get("username").toString());
-        userData.setFirstName(apiInputData.get("firstName").toString());
-        userData.setLastName(apiInputData.get("lastName").toString());
-        userData.setEmail(apiInputData.get("email").toString());
-        userData.setPassword(apiInputData.get("password").toString());
-        userData.setPhone(apiInputData.get("phone").toString());
-        userData.setUserStatus(Integer.parseInt(apiInputData.get("userStatus").toString()));
     }
 
 }

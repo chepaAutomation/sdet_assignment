@@ -1,0 +1,29 @@
+package users;
+
+import common.users.User;
+import common.users.UsersAPIResponse;
+import services.UserAPIHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class CreateSingleUser {
+
+    public User userData = new User();
+    UserAPIHelper usersAPI = new UserAPIHelper();
+    private static List<User> usersList = new ArrayList<>();
+    private User[] userArray = new User[1];
+
+    public User createSingleUserFlow(Map inputTestData){
+        userData = usersAPI.fillUsersData(inputTestData, userData);
+        usersList.add(userData);
+
+        userArray = usersList.toArray(userArray);
+
+        UsersAPIResponse usersAPIResponse = usersAPI.createUsersAPICall(userArray);
+        usersAPI.validateCreateUserResponse(usersAPIResponse);
+        return userData;
+    }
+
+}
