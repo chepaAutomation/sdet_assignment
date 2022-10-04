@@ -1,3 +1,1182 @@
+<<<<<<========onExecutionStart==========>>>>>>>
+About to begin executing Suite Pet Store - Sanity Flow
+About to begin executing Test Create, Update and Get User Details Test Scenarios
+Test case started for test name:prepareUsersDataArray
+About to begin executing following method : CreateUsersTest.prepareUsersDataArray
+Total users added : 1
+Completed executing following method : CreateUsersTest.prepareUsersDataArray
+Test Method resides in users.CreateUsersTest
+Test Method had the following parameters : {firstName=testFirst1, lastName=testLast1, password=test123, Description=First_user_details, userStatus=0, phone=1234567890, TestCaseNo=1, id=101, email=testuser1@gmail.com, username=testUser1},
+Test Status: Pass
+Test case :prepareUsersDataArray got passed
+Test case started for test name:prepareUsersDataArray
+About to begin executing following method : CreateUsersTest.prepareUsersDataArray
+Total users added : 2
+Completed executing following method : CreateUsersTest.prepareUsersDataArray
+Test Method resides in users.CreateUsersTest
+Test Method had the following parameters : {firstName=testFirst2, lastName=testLast2, password=test123, Description=Second_user_details, userStatus=0, phone=1234567891, TestCaseNo=2, id=102, email=testuser2@gmail.com, username=testUser2},
+Test Status: Pass
+Test case :prepareUsersDataArray got passed
+Test case started for test name:prepareUsersDataArray
+About to begin executing following method : CreateUsersTest.prepareUsersDataArray
+Total users added : 3
+Completed executing following method : CreateUsersTest.prepareUsersDataArray
+Test Method resides in users.CreateUsersTest
+Test Method had the following parameters : {firstName=testFirst3, lastName=testLast3, password=test123, Description=Third_user_details, userStatus=0, phone=1234567899, TestCaseNo=3, id=103, email=testuser3@gmail.com, username=testUser3},
+Test Status: Pass
+Test case :prepareUsersDataArray got passed
+Test case started for test name:createUsersFlow
+About to begin executing following method : CreateUsersTest.createUsersFlow
+## Running the test for create users with Array :
+Total users in the inputs request are : 3
+Get connection for route {s}->https://petstore.swagger.io:443
+Connecting to petstore.swagger.io:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/user/createWithArray HTTP/1.1
+ >> "POST /v2/user/createWithArray HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 508[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/user/createWithArray HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 508
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "[{"id":101,"username":"testUser1","firstName":"testFirst1","lastName":"testLast1","email":"testuser1@gmail.com","password":"test123","phone":"1234567890","userStatus":0},{"id":102,"username":"testUser2","firstName":"testFirst2","lastName":"testLast2","email":"testuser2@gmail.com","password":"test123","phone":"1234567891","userStatus":0},{"id":103,"username":"testUser3","firstName":"testFirst3","lastName":"testLast3","email":"testuser3@gmail.com","password":"test123","phone":"1234567899","userStatus":0}]"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:38 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:38 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2c[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"ok"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1e54cb33
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "ok"
+}
+### Verifying the create users API response
+### Verification passed for create users API
+Completed executing following method : CreateUsersTest.createUsersFlow
+Test Method resides in users.CreateUsersTest
+Test Status: Pass
+Test case :createUsersFlow got passed
+Test case started for test name:createSingleUsersDataFlow
+About to begin executing following method : UpdateUserDetailsTest.createSingleUsersDataFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Connecting to petstore.swagger.io:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/user/createWithArray HTTP/1.1
+ >> "POST /v2/user/createWithArray HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 178[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/user/createWithArray HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 178
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "[{"id":111,"username":"testUser111","firstName":"testFirst111","lastName":"testLast111","email":"testuser111@gmail.com","password":"test123","phone":"1234567890","userStatus":0}]"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:40 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:40 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2c[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"ok"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@f1a45f8
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "ok"
+}
+### Verifying the create users API response
+### Verification passed for create users API
+Completed executing following method : UpdateUserDetailsTest.createSingleUsersDataFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111, lastName=testLast111, password=test123, Description=Common_user_details, userStatus=0, phone=1234567890, TestCaseNo=1, id=111, email=testuser111@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :createSingleUsersDataFlow got passed
+Test case started for test name:updateUserDetailsFlow
+About to begin executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Connecting to petstore.swagger.io:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/user/testUser111 HTTP/1.1
+ >> "PUT /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 184[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 184
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111","email":"testuser111@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:41 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:41 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2d[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"111"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5432c277
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "111"
+}
+### Verifying the update user details API response 
+### Verification passed for update users API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/user/testUser111 HTTP/1.1
+ >> "GET /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:42 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:42 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b8[\r][\n]"
+ << "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111","email":"testuser111@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1eb2d371
+Connection can be kept alive indefinitely
+{
+    "id": 111,
+    "username": "testUser111",
+    "firstName": "testFirst111_updated",
+    "lastName": "testLast111",
+    "email": "testuser111@gmail.com",
+    "password": "test123",
+    "phone": "1234567890",
+    "userStatus": 0
+}
+### Verifying the user details after update user details API 
+### Verification passed for update users Details
+Completed executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111_updated, lastName=testLast111, password=test123, Description=update_firstName, userStatus=0, phone=1234567890, TestCaseNo=1, id=111, email=testuser111@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :updateUserDetailsFlow got passed
+Test case started for test name:updateUserDetailsFlow
+About to begin executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/user/testUser111 HTTP/1.1
+ >> "PUT /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 192[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 192
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:42 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:42 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2d[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"111"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7063686f
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "111"
+}
+### Verifying the update user details API response 
+### Verification passed for update users API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/user/testUser111 HTTP/1.1
+ >> "GET /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:42 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:42 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "c0[\r][\n]"
+ << "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@19b047fe
+Connection can be kept alive indefinitely
+{
+    "id": 111,
+    "username": "testUser111",
+    "firstName": "testFirst111_updated",
+    "lastName": "testLast111_updated",
+    "email": "testuser111@gmail.com",
+    "password": "test123",
+    "phone": "1234567890",
+    "userStatus": 0
+}
+### Verifying the user details after update user details API 
+### Verification passed for update users Details
+Completed executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111_updated, lastName=testLast111_updated, password=test123, Description=update_lastName, userStatus=0, phone=1234567890, TestCaseNo=2, id=111, email=testuser111@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :updateUserDetailsFlow got passed
+Test case started for test name:updateUserDetailsFlow
+About to begin executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/user/testUser111 HTTP/1.1
+ >> "PUT /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 200[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 200
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:42 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:42 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2d[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"111"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@446c3920
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "111"
+}
+### Verifying the update user details API response 
+### Verification passed for update users API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/user/testUser111 HTTP/1.1
+ >> "GET /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:43 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:43 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "c8[\r][\n]"
+ << "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123","phone":"1234567890","userStatus":0}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7dff6d05
+Connection can be kept alive indefinitely
+{
+    "id": 111,
+    "username": "testUser111",
+    "firstName": "testFirst111_updated",
+    "lastName": "testLast111_updated",
+    "email": "testuser111_updated@gmail.com",
+    "password": "test123",
+    "phone": "1234567890",
+    "userStatus": 0
+}
+### Verifying the user details after update user details API 
+### Verification passed for update users Details
+Completed executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111_updated, lastName=testLast111_updated, password=test123, Description=update_email, userStatus=0, phone=1234567890, TestCaseNo=3, id=111, email=testuser111_updated@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :updateUserDetailsFlow got passed
+Test case started for test name:updateUserDetailsFlow
+About to begin executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/user/testUser111 HTTP/1.1
+ >> "PUT /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 208[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 208
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123_updated","phone":"1234567890","userStatus":0}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:43 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:43 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2d[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"111"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@a33b4e3
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "111"
+}
+### Verifying the update user details API response 
+### Verification passed for update users API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/user/testUser111 HTTP/1.1
+ >> "GET /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:43 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:43 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "d0[\r][\n]"
+ << "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123_updated","phone":"1234567890","userStatus":0}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@8b91134
+Connection can be kept alive indefinitely
+{
+    "id": 111,
+    "username": "testUser111",
+    "firstName": "testFirst111_updated",
+    "lastName": "testLast111_updated",
+    "email": "testuser111_updated@gmail.com",
+    "password": "test123_updated",
+    "phone": "1234567890",
+    "userStatus": 0
+}
+### Verifying the user details after update user details API 
+### Verification passed for update users Details
+Completed executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111_updated, lastName=testLast111_updated, password=test123_updated, Description=update_password, userStatus=0, phone=1234567890, TestCaseNo=4, id=111, email=testuser111_updated@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :updateUserDetailsFlow got passed
+Test case started for test name:updateUserDetailsFlow
+About to begin executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: PUT /v2/user/testUser111 HTTP/1.1
+ >> "PUT /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 208[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> PUT /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 208
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123_updated","phone":"1234567899","userStatus":0}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:43 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:43 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "2d[\r][\n]"
+ << "{"code":200,"type":"unknown","message":"111"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3874b815
+Connection can be kept alive indefinitely
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "111"
+}
+### Verifying the update user details API response 
+### Verification passed for update users API
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: GET /v2/user/testUser111 HTTP/1.1
+ >> "GET /v2/user/testUser111 HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Length: 0[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> GET /v2/user/testUser111 HTTP/1.1
+>> accept: application/json
+>> Content-Length: 0
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:44 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:44 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "d0[\r][\n]"
+ << "{"id":111,"username":"testUser111","firstName":"testFirst111_updated","lastName":"testLast111_updated","email":"testuser111_updated@gmail.com","password":"test123_updated","phone":"1234567899","userStatus":0}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5d7835a8
+Connection can be kept alive indefinitely
+{
+    "id": 111,
+    "username": "testUser111",
+    "firstName": "testFirst111_updated",
+    "lastName": "testLast111_updated",
+    "email": "testuser111_updated@gmail.com",
+    "password": "test123_updated",
+    "phone": "1234567899",
+    "userStatus": 0
+}
+### Verifying the user details after update user details API 
+### Verification passed for update users Details
+Completed executing following method : UpdateUserDetailsTest.updateUserDetailsFlow
+Test Method resides in users.UpdateUserDetailsTest
+Test Method had the following parameters : {firstName=testFirst111_updated, lastName=testLast111_updated, password=test123_updated, Description=update_phone, userStatus=0, phone=1234567899, TestCaseNo=5, id=111, email=testuser111_updated@gmail.com, username=testUser111},
+Test Status: Pass
+Test case :updateUserDetailsFlow got passed
+About to end executing Test Create, Update and Get User Details Test Scenarios
+About to begin executing Test Create, Update and Find Pet Details Test Scenarios
+Test case started for test name:createPetFlow
+About to begin executing following method : CreatePetsTest.createPetFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Connecting to petstore.swagger.io:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/pet HTTP/1.1
+ >> "POST /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 186[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 186
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1001.0,"name":"Tommy","status":"available","category":{"id":2001,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3001,"name":"test_tag_dog_1"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:45 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:45 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b8[\r][\n]"
+ << "{"id":1001,"category":{"id":2001,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3001,"name":"test_tag_dog_1"}],"status":"available"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@73545b80
+Connection can be kept alive indefinitely
+{
+    "id": 1001,
+    "category": {
+        "id": 2001,
+        "name": "dog"
+    },
+    "name": "Tommy",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3001,
+            "name": "test_tag_dog_1"
+        }
+    ],
+    "status": "available"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Completed executing following method : CreatePetsTest.createPetFlow
+Test Method resides in pets.CreatePetsTest
+Test Method had the following parameters : {Description=create_pet_dog_1, category_name=dog, photoUrls=\src\test\resources\images\dog.jpg, category_id=2001, tag_name=test_tag_dog_1, TestCaseNo=1, name=Tommy, tag_id=3001, id=1001, status=available},
+Test Status: Pass
+Test case :createPetFlow got passed
+Test case started for test name:createPetFlow
+About to begin executing following method : CreatePetsTest.createPetFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/pet HTTP/1.1
+ >> "POST /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 185[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 185
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1002.0,"name":"Luna","status":"available","category":{"id":2002,"name":"cat"},"photoUrls":["\\src\\test\\resources\\images\\cat.jpg"],"tags":[{"id":3002,"name":"test_tag_cat_1"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:45 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:45 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b7[\r][\n]"
+ << "{"id":1002,"category":{"id":2002,"name":"cat"},"name":"Luna","photoUrls":["\\src\\test\\resources\\images\\cat.jpg"],"tags":[{"id":3002,"name":"test_tag_cat_1"}],"status":"available"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2e3f79a2
+Connection can be kept alive indefinitely
+{
+    "id": 1002,
+    "category": {
+        "id": 2002,
+        "name": "cat"
+    },
+    "name": "Luna",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\cat.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3002,
+            "name": "test_tag_cat_1"
+        }
+    ],
+    "status": "available"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Completed executing following method : CreatePetsTest.createPetFlow
+Test Method resides in pets.CreatePetsTest
+Test Method had the following parameters : {Description=create_pet_cat_1, category_name=cat, photoUrls=\src\test\resources\images\cat.jpg, category_id=2002, tag_name=test_tag_cat_1, TestCaseNo=2, name=Luna, tag_id=3002, id=1002, status=available},
+Test Status: Pass
+Test case :createPetFlow got passed
+Test case started for test name:createPetFlow
+About to begin executing following method : CreatePetsTest.createPetFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/pet HTTP/1.1
+ >> "POST /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 188[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 188
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1003.0,"name":"Tommy_2","status":"available","category":{"id":2003,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3003,"name":"test_tag_dog_2"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:46 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:46 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ba[\r][\n]"
+ << "{"id":1003,"category":{"id":2003,"name":"dog"},"name":"Tommy_2","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3003,"name":"test_tag_dog_2"}],"status":"available"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@756b58a7
+Connection can be kept alive indefinitely
+{
+    "id": 1003,
+    "category": {
+        "id": 2003,
+        "name": "dog"
+    },
+    "name": "Tommy_2",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\dog.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3003,
+            "name": "test_tag_dog_2"
+        }
+    ],
+    "status": "available"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Completed executing following method : CreatePetsTest.createPetFlow
+Test Method resides in pets.CreatePetsTest
+Test Method had the following parameters : {Description=create_pet_dog_2, category_name=dog, photoUrls=\src\test\resources\images\dog.jpg, category_id=2003, tag_name=test_tag_dog_2, TestCaseNo=3, name=Tommy_2, tag_id=3003, id=1003, status=available},
+Test Status: Pass
+Test case :createPetFlow got passed
+Test case started for test name:createPetFlow
+About to begin executing following method : CreatePetsTest.createPetFlow
+Get connection for route {s}->https://petstore.swagger.io:443
+Stale connection check
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /v2/pet HTTP/1.1
+ >> "POST /v2/pet HTTP/1.1[\r][\n]"
+ >> "accept: application/json[\r][\n]"
+ >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+ >> "Content-Length: 187[\r][\n]"
+ >> "Host: petstore.swagger.io[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /v2/pet HTTP/1.1
+>> accept: application/json
+>> Content-Type: application/json; charset=UTF-8
+>> Content-Length: 187
+>> Host: petstore.swagger.io
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
+>> Accept-Encoding: gzip,deflate
+ >> "{"id":1004.0,"name":"Luna_2","status":"available","category":{"id":2004,"name":"cat"},"photoUrls":["\\src\\test\\resources\\images\\cat.jpg"],"tags":[{"id":3004,"name":"test_tag_cat_2"}]}"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:46 GMT[\r][\n]"
+ << "Content-Type: application/json[\r][\n]"
+ << "Transfer-Encoding: chunked[\r][\n]"
+ << "Connection: keep-alive[\r][\n]"
+ << "Access-Control-Allow-Origin: *[\r][\n]"
+ << "Access-Control-Allow-Methods: GET, POST, DELETE, PUT[\r][\n]"
+ << "Access-Control-Allow-Headers: Content-Type, api_key, Authorization[\r][\n]"
+ << "Server: Jetty(9.2.9.v20150224)[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 04 Oct 2022 07:05:46 GMT
+<< Content-Type: application/json
+<< Transfer-Encoding: chunked
+<< Connection: keep-alive
+<< Access-Control-Allow-Origin: *
+<< Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+<< Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+<< Server: Jetty(9.2.9.v20150224)
+Connection can be kept alive indefinitely
+Parsing response as: application/json
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "b9[\r][\n]"
+ << "{"id":1004,"category":{"id":2004,"name":"cat"},"name":"Luna_2","photoUrls":["\\src\\test\\resources\\images\\cat.jpg"],"tags":[{"id":3004,"name":"test_tag_cat_2"}],"status":"available"}"
+ << "[\r][\n]"
+ << "0[\r][\n]"
+ << "[\r][\n]"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6aba5d30
+Connection can be kept alive indefinitely
+{
+    "id": 1004,
+    "category": {
+        "id": 2004,
+        "name": "cat"
+    },
+    "name": "Luna_2",
+    "photoUrls": [
+        "\\src\\test\\resources\\images\\cat.jpg"
+    ],
+    "tags": [
+        {
+            "id": 3004,
+            "name": "test_tag_cat_2"
+        }
+    ],
+    "status": "available"
+}
+### Verifying the Pet details after hitting create pets API 
+### Verification passed for create Pet API
+Completed executing following method : CreatePetsTest.createPetFlow
+Test Method resides in pets.CreatePetsTest
+Test Method had the following parameters : {Description=create_pet_cat_2, category_name=cat, photoUrls=\src\test\resources\images\cat.jpg, category_id=2004, tag_name=test_tag_cat_2, TestCaseNo=4, name=Luna_2, tag_id=3004, id=1004, status=available},
+Test Status: Pass
+Test case :createPetFlow got passed
+Test case started for test name:createSinglePetDataFlow
+About to begin executing following method : UpdatePetsDetailsTest.createSinglePetDataFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Connecting to petstore.swagger.io:443
 CookieSpec selected: ignoreCookies
@@ -25,7 +1204,7 @@ Sending request: POST /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Tommy","status":"available","category":{"id":2222,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:09 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:48 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -36,7 +1215,7 @@ Sending request: POST /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:09 GMT
+<< Date: Tue, 04 Oct 2022 07:05:48 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -52,7 +1231,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@51dbd6e4
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@61f39bb
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -74,6 +1253,13 @@ Connection can be kept alive indefinitely
 }
 ### Verifying the Pet details after hitting create pets API 
 ### Verification passed for create Pet API
+Completed executing following method : UpdatePetsDetailsTest.createSinglePetDataFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=create_pet_dog_1111, category_name=dog, photoUrls=\src\test\resources\images\dog.jpg, category_id=2222, tag_name=test_tag_dog_1111, TestCaseNo=1, name=Tommy, tag_id=3333, id=1111, status=available},
+Test Status: Pass
+Test case :createSinglePetDataFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Connecting to petstore.swagger.io:443
 CookieSpec selected: ignoreCookies
@@ -101,7 +1287,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Tommy","status":"pending","category":{"id":2222,"name":"dog"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:11 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:49 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -112,7 +1298,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:11 GMT
+<< Date: Tue, 04 Oct 2022 07:05:49 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -128,7 +1314,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@359b650b
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3eabe84a
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -174,7 +1360,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:11 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:49 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -185,7 +1371,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:11 GMT
+<< Date: Tue, 04 Oct 2022 07:05:49 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -201,7 +1387,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@44de94c3
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@46c3a14d
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -247,7 +1433,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:11 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:50 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -258,7 +1444,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:11 GMT
+<< Date: Tue, 04 Oct 2022 07:05:50 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -269,28 +1455,102 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "27d[\r][\n]"
- << "[{"id":9223372036854245484,"category":{"id":0,"name":"Golden"},"name":"Doggiii - Marooss","photoUrls":["https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"],"tags":[{"id":0,"name":"Maroo"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]"
+ << "4de[\r][\n]"
+ << "[{"id":9223372036854244635,"category":{"id":16343477,"name":"CHUI"},"name":"Cat","photoUrls":["laborum do","deserunt in eiusmod officia"],"tags":[{"id":49056301,"name":"pr"},{"id":10417678,"name":"velit quis cillum"}],"status":"pending"},{"id":9223372036854244636,"category":{"id":72805618,"name":"ea officia do"},"name":"doggie","photoUrls":["nulla occaecat ex cillum","cillum esse Duis"],"tags":[{"id":81597053,"name":"sed minim irure ex in"},{"id":-78170811,"name":"id ipsum Ut ullamco"}],"status":"pending"},{"id":9223372036854245136,"category":{"id":47476709,"name":"laborum ullamco labore magna"},"name":"doggie","photoUrls":["in occaecat","mollit ullamco et dolore nisi"],"tags":[{"id":-23970002,"name":"esse dolor in sed"},{"id":91117207,"name":"adipisicing irure ex occaecat"}],"status":"pending"},{"id":74982713,"category":{"id":-15301108,"name":"Ut enim occaecat aute"},"name":"doggie","photoUrls":["elit ad","pariatur elit"],"tags":[{"id":62572940,"name":"exercitation in elit ut ea"},{"id":-25174988,"name":"ut amet aliquip"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"dog"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3bead518
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@e9dc4d0
 Connection can be kept alive indefinitely
 [
     {
-        "id": 9223372036854245484,
+        "id": 9223372036854244635,
         "category": {
-            "id": 0,
-            "name": "Golden"
+            "id": 16343477,
+            "name": "CHUI"
         },
-        "name": "Doggiii - Marooss",
+        "name": "Cat",
         "photoUrls": [
-            "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "laborum do",
+            "deserunt in eiusmod officia"
         ],
         "tags": [
             {
-                "id": 0,
-                "name": "Maroo"
+                "id": 49056301,
+                "name": "pr"
+            },
+            {
+                "id": 10417678,
+                "name": "velit quis cillum"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854244636,
+        "category": {
+            "id": 72805618,
+            "name": "ea officia do"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "nulla occaecat ex cillum",
+            "cillum esse Duis"
+        ],
+        "tags": [
+            {
+                "id": 81597053,
+                "name": "sed minim irure ex in"
+            },
+            {
+                "id": -78170811,
+                "name": "id ipsum Ut ullamco"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854245136,
+        "category": {
+            "id": 47476709,
+            "name": "laborum ullamco labore magna"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "in occaecat",
+            "mollit ullamco et dolore nisi"
+        ],
+        "tags": [
+            {
+                "id": -23970002,
+                "name": "esse dolor in sed"
+            },
+            {
+                "id": 91117207,
+                "name": "adipisicing irure ex occaecat"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 74982713,
+        "category": {
+            "id": -15301108,
+            "name": "Ut enim occaecat aute"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "elit ad",
+            "pariatur elit"
+        ],
+        "tags": [
+            {
+                "id": 62572940,
+                "name": "exercitation in elit ut ea"
+            },
+            {
+                "id": -25174988,
+                "name": "ut amet aliquip"
             }
         ],
         "status": "pending"
@@ -312,28 +1572,17 @@ Connection can be kept alive indefinitely
             }
         ],
         "status": "pending"
-    },
-    {
-        "id": 5,
-        "category": {
-            "id": 5,
-            "name": "jimmy"
-        },
-        "name": "jimmy",
-        "photoUrls": [
-            
-        ],
-        "tags": [
-            {
-                "id": 5,
-                "name": "jimmy"
-            }
-        ],
-        "status": "pending"
     }
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : pending
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_status_pending, category_name=dog, photoUrls=\src\test\resources\images\dog.jpg, category_id=2222, tag_name=test_tag_dog_1111, TestCaseNo=1, name=Tommy, tag_id=3333, id=1111, status=pending},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -361,7 +1610,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Tommy","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:11 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:50 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -372,7 +1621,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:11 GMT
+<< Date: Tue, 04 Oct 2022 07:05:50 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -388,7 +1637,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1fde4f40
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@316a598d
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -434,7 +1683,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:12 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:50 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -445,7 +1694,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:12 GMT
+<< Date: Tue, 04 Oct 2022 07:05:50 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -461,7 +1710,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3fdecce
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5d5160e6
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -507,7 +1756,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:12 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:51 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -518,7 +1767,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:12 GMT
+<< Date: Tue, 04 Oct 2022 07:05:51 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -529,28 +1778,102 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "280[\r][\n]"
- << "[{"id":9223372036854245484,"category":{"id":0,"name":"Golden"},"name":"Doggiii - Marooss","photoUrls":["https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"],"tags":[{"id":0,"name":"Maroo"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]"
+ << "4e1[\r][\n]"
+ << "[{"id":9223372036854244635,"category":{"id":16343477,"name":"CHUI"},"name":"Cat","photoUrls":["laborum do","deserunt in eiusmod officia"],"tags":[{"id":49056301,"name":"pr"},{"id":10417678,"name":"velit quis cillum"}],"status":"pending"},{"id":9223372036854244636,"category":{"id":72805618,"name":"ea officia do"},"name":"doggie","photoUrls":["nulla occaecat ex cillum","cillum esse Duis"],"tags":[{"id":81597053,"name":"sed minim irure ex in"},{"id":-78170811,"name":"id ipsum Ut ullamco"}],"status":"pending"},{"id":9223372036854245136,"category":{"id":47476709,"name":"laborum ullamco labore magna"},"name":"doggie","photoUrls":["in occaecat","mollit ullamco et dolore nisi"],"tags":[{"id":-23970002,"name":"esse dolor in sed"},{"id":91117207,"name":"adipisicing irure ex occaecat"}],"status":"pending"},{"id":74982713,"category":{"id":-15301108,"name":"Ut enim occaecat aute"},"name":"doggie","photoUrls":["elit ad","pariatur elit"],"tags":[{"id":62572940,"name":"exercitation in elit ut ea"},{"id":-25174988,"name":"ut amet aliquip"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Tommy","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@344426bf
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@778d82e9
 Connection can be kept alive indefinitely
 [
     {
-        "id": 9223372036854245484,
+        "id": 9223372036854244635,
         "category": {
-            "id": 0,
-            "name": "Golden"
+            "id": 16343477,
+            "name": "CHUI"
         },
-        "name": "Doggiii - Marooss",
+        "name": "Cat",
         "photoUrls": [
-            "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "laborum do",
+            "deserunt in eiusmod officia"
         ],
         "tags": [
             {
-                "id": 0,
-                "name": "Maroo"
+                "id": 49056301,
+                "name": "pr"
+            },
+            {
+                "id": 10417678,
+                "name": "velit quis cillum"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854244636,
+        "category": {
+            "id": 72805618,
+            "name": "ea officia do"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "nulla occaecat ex cillum",
+            "cillum esse Duis"
+        ],
+        "tags": [
+            {
+                "id": 81597053,
+                "name": "sed minim irure ex in"
+            },
+            {
+                "id": -78170811,
+                "name": "id ipsum Ut ullamco"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854245136,
+        "category": {
+            "id": 47476709,
+            "name": "laborum ullamco labore magna"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "in occaecat",
+            "mollit ullamco et dolore nisi"
+        ],
+        "tags": [
+            {
+                "id": -23970002,
+                "name": "esse dolor in sed"
+            },
+            {
+                "id": 91117207,
+                "name": "adipisicing irure ex occaecat"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 74982713,
+        "category": {
+            "id": -15301108,
+            "name": "Ut enim occaecat aute"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "elit ad",
+            "pariatur elit"
+        ],
+        "tags": [
+            {
+                "id": 62572940,
+                "name": "exercitation in elit ut ea"
+            },
+            {
+                "id": -25174988,
+                "name": "ut amet aliquip"
             }
         ],
         "status": "pending"
@@ -572,28 +1895,17 @@ Connection can be kept alive indefinitely
             }
         ],
         "status": "pending"
-    },
-    {
-        "id": 5,
-        "category": {
-            "id": 5,
-            "name": "jimmy"
-        },
-        "name": "jimmy",
-        "photoUrls": [
-            
-        ],
-        "tags": [
-            {
-                "id": 5,
-                "name": "jimmy"
-            }
-        ],
-        "status": "pending"
     }
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : pending
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_category_name, category_name=doggie, photoUrls=\src\test\resources\images\dog.jpg, category_id=2222, tag_name=test_tag_dog_1111, TestCaseNo=2, name=Tommy, tag_id=3333, id=1111, status=pending},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -621,7 +1933,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:12 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:51 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -632,7 +1944,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:12 GMT
+<< Date: Tue, 04 Oct 2022 07:05:51 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -648,7 +1960,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3f29e26
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3724b43e
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -694,7 +2006,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:12 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:51 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -705,7 +2017,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:12 GMT
+<< Date: Tue, 04 Oct 2022 07:05:51 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -721,7 +2033,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@314c8b4a
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@77eb5790
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -767,7 +2079,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:13 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:51 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -778,7 +2090,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:13 GMT
+<< Date: Tue, 04 Oct 2022 07:05:51 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -789,28 +2101,102 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "27f[\r][\n]"
- << "[{"id":9223372036854245484,"category":{"id":0,"name":"Golden"},"name":"Doggiii - Marooss","photoUrls":["https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"],"tags":[{"id":0,"name":"Maroo"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]"
+ << "4e0[\r][\n]"
+ << "[{"id":9223372036854244635,"category":{"id":16343477,"name":"CHUI"},"name":"Cat","photoUrls":["laborum do","deserunt in eiusmod officia"],"tags":[{"id":49056301,"name":"pr"},{"id":10417678,"name":"velit quis cillum"}],"status":"pending"},{"id":9223372036854244636,"category":{"id":72805618,"name":"ea officia do"},"name":"doggie","photoUrls":["nulla occaecat ex cillum","cillum esse Duis"],"tags":[{"id":81597053,"name":"sed minim irure ex in"},{"id":-78170811,"name":"id ipsum Ut ullamco"}],"status":"pending"},{"id":9223372036854245136,"category":{"id":47476709,"name":"laborum ullamco labore magna"},"name":"doggie","photoUrls":["in occaecat","mollit ullamco et dolore nisi"],"tags":[{"id":-23970002,"name":"esse dolor in sed"},{"id":91117207,"name":"adipisicing irure ex occaecat"}],"status":"pending"},{"id":74982713,"category":{"id":-15301108,"name":"Ut enim occaecat aute"},"name":"doggie","photoUrls":["elit ad","pariatur elit"],"tags":[{"id":62572940,"name":"exercitation in elit ut ea"},{"id":-25174988,"name":"ut amet aliquip"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@26d820eb
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@68e7c8c3
 Connection can be kept alive indefinitely
 [
     {
-        "id": 9223372036854245484,
+        "id": 9223372036854244635,
         "category": {
-            "id": 0,
-            "name": "Golden"
+            "id": 16343477,
+            "name": "CHUI"
         },
-        "name": "Doggiii - Marooss",
+        "name": "Cat",
         "photoUrls": [
-            "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "laborum do",
+            "deserunt in eiusmod officia"
         ],
         "tags": [
             {
-                "id": 0,
-                "name": "Maroo"
+                "id": 49056301,
+                "name": "pr"
+            },
+            {
+                "id": 10417678,
+                "name": "velit quis cillum"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854244636,
+        "category": {
+            "id": 72805618,
+            "name": "ea officia do"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "nulla occaecat ex cillum",
+            "cillum esse Duis"
+        ],
+        "tags": [
+            {
+                "id": 81597053,
+                "name": "sed minim irure ex in"
+            },
+            {
+                "id": -78170811,
+                "name": "id ipsum Ut ullamco"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854245136,
+        "category": {
+            "id": 47476709,
+            "name": "laborum ullamco labore magna"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "in occaecat",
+            "mollit ullamco et dolore nisi"
+        ],
+        "tags": [
+            {
+                "id": -23970002,
+                "name": "esse dolor in sed"
+            },
+            {
+                "id": 91117207,
+                "name": "adipisicing irure ex occaecat"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 74982713,
+        "category": {
+            "id": -15301108,
+            "name": "Ut enim occaecat aute"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "elit ad",
+            "pariatur elit"
+        ],
+        "tags": [
+            {
+                "id": 62572940,
+                "name": "exercitation in elit ut ea"
+            },
+            {
+                "id": -25174988,
+                "name": "ut amet aliquip"
             }
         ],
         "status": "pending"
@@ -832,28 +2218,17 @@ Connection can be kept alive indefinitely
             }
         ],
         "status": "pending"
-    },
-    {
-        "id": 5,
-        "category": {
-            "id": 5,
-            "name": "jimmy"
-        },
-        "name": "jimmy",
-        "photoUrls": [
-            
-        ],
-        "tags": [
-            {
-                "id": 5,
-                "name": "jimmy"
-            }
-        ],
-        "status": "pending"
     }
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : pending
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_name, category_name=doggie, photoUrls=\src\test\resources\images\dog.jpg, category_id=2222, tag_name=test_tag_dog_1111, TestCaseNo=3, name=Ruby, tag_id=3333, id=1111, status=pending},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -881,7 +2256,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:13 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:52 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -892,7 +2267,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:13 GMT
+<< Date: Tue, 04 Oct 2022 07:05:52 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -908,7 +2283,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6972c30a
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6778aea6
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -954,7 +2329,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:13 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:52 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -965,7 +2340,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:13 GMT
+<< Date: Tue, 04 Oct 2022 07:05:52 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -981,7 +2356,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3910fe11
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4e1ce44
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -1027,7 +2402,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:13 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:52 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1038,7 +2413,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:13 GMT
+<< Date: Tue, 04 Oct 2022 07:05:52 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1049,28 +2424,102 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "280[\r][\n]"
- << "[{"id":9223372036854245484,"category":{"id":0,"name":"Golden"},"name":"Doggiii - Marooss","photoUrls":["https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"],"tags":[{"id":0,"name":"Maroo"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]"
+ << "4e1[\r][\n]"
+ << "[{"id":9223372036854244635,"category":{"id":16343477,"name":"CHUI"},"name":"Cat","photoUrls":["laborum do","deserunt in eiusmod officia"],"tags":[{"id":49056301,"name":"pr"},{"id":10417678,"name":"velit quis cillum"}],"status":"pending"},{"id":9223372036854244636,"category":{"id":72805618,"name":"ea officia do"},"name":"doggie","photoUrls":["nulla occaecat ex cillum","cillum esse Duis"],"tags":[{"id":81597053,"name":"sed minim irure ex in"},{"id":-78170811,"name":"id ipsum Ut ullamco"}],"status":"pending"},{"id":9223372036854245136,"category":{"id":47476709,"name":"laborum ullamco labore magna"},"name":"doggie","photoUrls":["in occaecat","mollit ullamco et dolore nisi"],"tags":[{"id":-23970002,"name":"esse dolor in sed"},{"id":91117207,"name":"adipisicing irure ex occaecat"}],"status":"pending"},{"id":74982713,"category":{"id":-15301108,"name":"Ut enim occaecat aute"},"name":"doggie","photoUrls":["elit ad","pariatur elit"],"tags":[{"id":62572940,"name":"exercitation in elit ut ea"},{"id":-25174988,"name":"ut amet aliquip"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1111"}],"status":"pending"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@460510aa
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@69228e85
 Connection can be kept alive indefinitely
 [
     {
-        "id": 9223372036854245484,
+        "id": 9223372036854244635,
         "category": {
-            "id": 0,
-            "name": "Golden"
+            "id": 16343477,
+            "name": "CHUI"
         },
-        "name": "Doggiii - Marooss",
+        "name": "Cat",
         "photoUrls": [
-            "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "laborum do",
+            "deserunt in eiusmod officia"
         ],
         "tags": [
             {
-                "id": 0,
-                "name": "Maroo"
+                "id": 49056301,
+                "name": "pr"
+            },
+            {
+                "id": 10417678,
+                "name": "velit quis cillum"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854244636,
+        "category": {
+            "id": 72805618,
+            "name": "ea officia do"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "nulla occaecat ex cillum",
+            "cillum esse Duis"
+        ],
+        "tags": [
+            {
+                "id": 81597053,
+                "name": "sed minim irure ex in"
+            },
+            {
+                "id": -78170811,
+                "name": "id ipsum Ut ullamco"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854245136,
+        "category": {
+            "id": 47476709,
+            "name": "laborum ullamco labore magna"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "in occaecat",
+            "mollit ullamco et dolore nisi"
+        ],
+        "tags": [
+            {
+                "id": -23970002,
+                "name": "esse dolor in sed"
+            },
+            {
+                "id": 91117207,
+                "name": "adipisicing irure ex occaecat"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 74982713,
+        "category": {
+            "id": -15301108,
+            "name": "Ut enim occaecat aute"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "elit ad",
+            "pariatur elit"
+        ],
+        "tags": [
+            {
+                "id": 62572940,
+                "name": "exercitation in elit ut ea"
+            },
+            {
+                "id": -25174988,
+                "name": "ut amet aliquip"
             }
         ],
         "status": "pending"
@@ -1092,28 +2541,17 @@ Connection can be kept alive indefinitely
             }
         ],
         "status": "pending"
-    },
-    {
-        "id": 5,
-        "category": {
-            "id": 5,
-            "name": "jimmy"
-        },
-        "name": "jimmy",
-        "photoUrls": [
-            
-        ],
-        "tags": [
-            {
-                "id": 5,
-                "name": "jimmy"
-            }
-        ],
-        "status": "pending"
     }
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : pending
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_photoURL, category_name=doggie, photoUrls=\src\test\resources\images\dog1.jpg, category_id=2222, tag_name=test_tag_dog_1111, TestCaseNo=4, name=Ruby, tag_id=3333, id=1111, status=pending},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -1141,7 +2579,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Ruby","status":"pending","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:14 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:53 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1152,7 +2590,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:14 GMT
+<< Date: Tue, 04 Oct 2022 07:05:53 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1168,7 +2606,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@327c7bea
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@332820f4
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -1214,7 +2652,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:14 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:53 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1225,7 +2663,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:14 GMT
+<< Date: Tue, 04 Oct 2022 07:05:53 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1241,7 +2679,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@348d18a3
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7173ae5b
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -1287,7 +2725,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:14 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:53 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1298,7 +2736,7 @@ Sending request: GET /v2/pet/findByStatus?status=pending HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:14 GMT
+<< Date: Tue, 04 Oct 2022 07:05:53 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1309,28 +2747,102 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "280[\r][\n]"
- << "[{"id":9223372036854245484,"category":{"id":0,"name":"Golden"},"name":"Doggiii - Marooss","photoUrls":["https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"],"tags":[{"id":0,"name":"Maroo"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]"
+ << "4e1[\r][\n]"
+ << "[{"id":9223372036854244635,"category":{"id":16343477,"name":"CHUI"},"name":"Cat","photoUrls":["laborum do","deserunt in eiusmod officia"],"tags":[{"id":49056301,"name":"pr"},{"id":10417678,"name":"velit quis cillum"}],"status":"pending"},{"id":9223372036854244636,"category":{"id":72805618,"name":"ea officia do"},"name":"doggie","photoUrls":["nulla occaecat ex cillum","cillum esse Duis"],"tags":[{"id":81597053,"name":"sed minim irure ex in"},{"id":-78170811,"name":"id ipsum Ut ullamco"}],"status":"pending"},{"id":9223372036854245136,"category":{"id":47476709,"name":"laborum ullamco labore magna"},"name":"doggie","photoUrls":["in occaecat","mollit ullamco et dolore nisi"],"tags":[{"id":-23970002,"name":"esse dolor in sed"},{"id":91117207,"name":"adipisicing irure ex occaecat"}],"status":"pending"},{"id":74982713,"category":{"id":-15301108,"name":"Ut enim occaecat aute"},"name":"doggie","photoUrls":["elit ad","pariatur elit"],"tags":[{"id":62572940,"name":"exercitation in elit ut ea"},{"id":-25174988,"name":"ut amet aliquip"}],"status":"pending"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog1.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"pending"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6de0f580
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@72456279
 Connection can be kept alive indefinitely
 [
     {
-        "id": 9223372036854245484,
+        "id": 9223372036854244635,
         "category": {
-            "id": 0,
-            "name": "Golden"
+            "id": 16343477,
+            "name": "CHUI"
         },
-        "name": "Doggiii - Marooss",
+        "name": "Cat",
         "photoUrls": [
-            "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "laborum do",
+            "deserunt in eiusmod officia"
         ],
         "tags": [
             {
-                "id": 0,
-                "name": "Maroo"
+                "id": 49056301,
+                "name": "pr"
+            },
+            {
+                "id": 10417678,
+                "name": "velit quis cillum"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854244636,
+        "category": {
+            "id": 72805618,
+            "name": "ea officia do"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "nulla occaecat ex cillum",
+            "cillum esse Duis"
+        ],
+        "tags": [
+            {
+                "id": 81597053,
+                "name": "sed minim irure ex in"
+            },
+            {
+                "id": -78170811,
+                "name": "id ipsum Ut ullamco"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 9223372036854245136,
+        "category": {
+            "id": 47476709,
+            "name": "laborum ullamco labore magna"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "in occaecat",
+            "mollit ullamco et dolore nisi"
+        ],
+        "tags": [
+            {
+                "id": -23970002,
+                "name": "esse dolor in sed"
+            },
+            {
+                "id": 91117207,
+                "name": "adipisicing irure ex occaecat"
+            }
+        ],
+        "status": "pending"
+    },
+    {
+        "id": 74982713,
+        "category": {
+            "id": -15301108,
+            "name": "Ut enim occaecat aute"
+        },
+        "name": "doggie",
+        "photoUrls": [
+            "elit ad",
+            "pariatur elit"
+        ],
+        "tags": [
+            {
+                "id": 62572940,
+                "name": "exercitation in elit ut ea"
+            },
+            {
+                "id": -25174988,
+                "name": "ut amet aliquip"
             }
         ],
         "status": "pending"
@@ -1352,28 +2864,17 @@ Connection can be kept alive indefinitely
             }
         ],
         "status": "pending"
-    },
-    {
-        "id": 5,
-        "category": {
-            "id": 5,
-            "name": "jimmy"
-        },
-        "name": "jimmy",
-        "photoUrls": [
-            
-        ],
-        "tags": [
-            {
-                "id": 5,
-                "name": "jimmy"
-            }
-        ],
-        "status": "pending"
     }
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : pending
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_tag_name, category_name=doggie, photoUrls=\src\test\resources\images\dog1.jpg, category_id=2222, tag_name=test_tag_dog_1112, TestCaseNo=5, name=Ruby, tag_id=3333, id=1111, status=pending},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:updatePetDetailsFlow
+About to begin executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -1401,7 +2902,7 @@ Sending request: PUT /v2/pet HTTP/1.1
 >> Accept-Encoding: gzip,deflate
  >> "{"id":1111.0,"name":"Ruby","status":"sold","category":{"id":2222,"name":"doggie"},"photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}]}"
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:14 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:53 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1412,7 +2913,7 @@ Sending request: PUT /v2/pet HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:14 GMT
+<< Date: Tue, 04 Oct 2022 07:05:53 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1428,7 +2929,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5782d777
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@84487f4
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -1474,7 +2975,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:15 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:54 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1485,7 +2986,7 @@ Sending request: GET /v2/pet/1111 HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:15 GMT
+<< Date: Tue, 04 Oct 2022 07:05:54 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1501,7 +3002,7 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4f824872
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@bfc14b9
 Connection can be kept alive indefinitely
 {
     "id": 1111,
@@ -1547,7 +3048,7 @@ Sending request: GET /v2/pet/findByStatus?status=sold HTTP/1.1
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:15 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:54 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1558,7 +3059,7 @@ Sending request: GET /v2/pet/findByStatus?status=sold HTTP/1.1
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:15 GMT
+<< Date: Tue, 04 Oct 2022 07:05:54 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1569,14 +3070,166 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "21d[\r][\n]"
- << "[{"id":9,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":4788,"tags":[{"id":2350,"name":"NZNQDI"},{"id":6035,"name":"VSUVWPDRR"},{"id":795,"name":"RBGVC"}],"status":"sold"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}]"
+ << "b73[\r][\n]"
+ << "[{"id":67,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":86,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":80,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":54,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":56,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":65,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":36,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":94,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":9,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":123243434,"category":{"id":133,"name":"cat"},"name":"puggie","photoUrls":["https://kartinkin.net/uploads/posts/2022-02/1645782663_63-kartinkin-net-p-kartinki-svinki-72.jpg"],"tags":[{"id":133,"name":"puggie"}],"status":"sold"},{"id":62,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":1664863233329,"category":{"id":0,"name":"string"},"name":"gera","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":30,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":88,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":23,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":8331,"category":{"id":8331,"name":"Brabham-Ford"},"name":"Brabham-Ford","photoUrls":["http://en.wikipedia.org/wiki/Brabham"],"tags":[{"id":8331,"name":"Brabham-Ford"}],"status":"sold"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@29629fbb
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2dfe5525
 Connection can be kept alive indefinitely
 [
+    {
+        "id": 67,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 86,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 80,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 54,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 56,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 65,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 36,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 94,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
     {
         "id": 9,
         "category": {
@@ -1590,6 +3243,80 @@ Connection can be kept alive indefinitely
             {
                 "id": 0,
                 "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 123243434,
+        "category": {
+            "id": 133,
+            "name": "cat"
+        },
+        "name": "puggie",
+        "photoUrls": [
+            "https://kartinkin.net/uploads/posts/2022-02/1645782663_63-kartinkin-net-p-kartinki-svinki-72.jpg"
+        ],
+        "tags": [
+            {
+                "id": 133,
+                "name": "puggie"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 62,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 1664863233329,
+        "category": {
+            "id": 0,
+            "name": "string"
+        },
+        "name": "gera",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 30,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
             }
         ],
         "status": "sold"
@@ -1612,19 +3339,57 @@ Connection can be kept alive indefinitely
         "status": "sold"
     },
     {
-        "id": 4788,
+        "id": 88,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
         "tags": [
             {
-                "id": 2350,
-                "name": "NZNQDI"
-            },
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 23,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
             {
-                "id": 6035,
-                "name": "VSUVWPDRR"
-            },
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 8331,
+        "category": {
+            "id": 8331,
+            "name": "Brabham-Ford"
+        },
+        "name": "Brabham-Ford",
+        "photoUrls": [
+            "http://en.wikipedia.org/wiki/Brabham"
+        ],
+        "tags": [
             {
-                "id": 795,
-                "name": "RBGVC"
+                "id": 8331,
+                "name": "Brabham-Ford"
             }
         ],
         "status": "sold"
@@ -1650,6 +3415,13 @@ Connection can be kept alive indefinitely
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : sold
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.updatePetDetailsFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Method had the following parameters : {Description=update_status_sold, category_name=doggie, photoUrls=\src\test\resources\images\dog.jpg, category_id=2222, tag_name=test_tag_dog_1112, TestCaseNo=6, name=Ruby, tag_id=3333, id=1111, status=sold},
+Test Status: Pass
+Test case :updatePetDetailsFlow got passed
+Test case started for test name:findByStatusFlow
+About to begin executing following method : UpdatePetsDetailsTest.findByStatusFlow
 Get connection for route {s}->https://petstore.swagger.io:443
 Stale connection check
 CookieSpec selected: ignoreCookies
@@ -1674,7 +3446,7 @@ Sending request: GET /v2/pet/findByStatus?status=sold&status=available&status=pe
 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_333)
 >> Accept-Encoding: gzip,deflate
  << "HTTP/1.1 200 OK[\r][\n]"
- << "Date: Mon, 03 Oct 2022 07:55:15 GMT[\r][\n]"
+ << "Date: Tue, 04 Oct 2022 07:05:54 GMT[\r][\n]"
  << "Content-Type: application/json[\r][\n]"
  << "Transfer-Encoding: chunked[\r][\n]"
  << "Connection: keep-alive[\r][\n]"
@@ -1685,7 +3457,7 @@ Sending request: GET /v2/pet/findByStatus?status=sold&status=available&status=pe
  << "[\r][\n]"
 Receiving response: HTTP/1.1 200 OK
 << HTTP/1.1 200 OK
-<< Date: Mon, 03 Oct 2022 07:55:15 GMT
+<< Date: Tue, 04 Oct 2022 07:05:54 GMT
 << Content-Type: application/json
 << Transfer-Encoding: chunked
 << Connection: keep-alive
@@ -1696,14 +3468,166 @@ Receiving response: HTTP/1.1 200 OK
 Connection can be kept alive indefinitely
 Parsing response as: application/json
 Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
- << "21d[\r][\n]"
- << "[{"id":9,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":4788,"tags":[{"id":2350,"name":"NZNQDI"},{"id":6035,"name":"VSUVWPDRR"},{"id":795,"name":"RBGVC"}],"status":"sold"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}]"
+ << "b73[\r][\n]"
+ << "[{"id":67,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":86,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":80,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":54,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":56,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":65,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":36,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":94,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":9,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":123243434,"category":{"id":133,"name":"cat"},"name":"puggie","photoUrls":["https://kartinkin.net/uploads/posts/2022-02/1645782663_63-kartinkin-net-p-kartinki-svinki-72.jpg"],"tags":[{"id":133,"name":"puggie"}],"status":"sold"},{"id":62,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":1664863233329,"category":{"id":0,"name":"string"},"name":"gera","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":30,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":12,"category":{"id":0,"name":"dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":88,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":23,"category":{"id":13,"name":"dog"},"name":"updatedName","photoUrls":["https://image1","https://image2"],"tags":[{"id":43,"name":"Good"}],"status":"sold"},{"id":8331,"category":{"id":8331,"name":"Brabham-Ford"},"name":"Brabham-Ford","photoUrls":["http://en.wikipedia.org/wiki/Brabham"],"tags":[{"id":8331,"name":"Brabham-Ford"}],"status":"sold"},{"id":1111,"category":{"id":2222,"name":"doggie"},"name":"Ruby","photoUrls":["\\src\\test\\resources\\images\\dog.jpg"],"tags":[{"id":3333,"name":"test_tag_dog_1112"}],"status":"sold"}]"
  << "[\r][\n]"
  << "0[\r][\n]"
  << "[\r][\n]"
-Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3506d826
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6a9b9909
 Connection can be kept alive indefinitely
 [
+    {
+        "id": 67,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 86,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 80,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 54,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 56,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 65,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 36,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 94,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
     {
         "id": 9,
         "category": {
@@ -1717,6 +3641,80 @@ Connection can be kept alive indefinitely
             {
                 "id": 0,
                 "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 123243434,
+        "category": {
+            "id": 133,
+            "name": "cat"
+        },
+        "name": "puggie",
+        "photoUrls": [
+            "https://kartinkin.net/uploads/posts/2022-02/1645782663_63-kartinkin-net-p-kartinki-svinki-72.jpg"
+        ],
+        "tags": [
+            {
+                "id": 133,
+                "name": "puggie"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 62,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 1664863233329,
+        "category": {
+            "id": 0,
+            "name": "string"
+        },
+        "name": "gera",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 30,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
+            {
+                "id": 43,
+                "name": "Good"
             }
         ],
         "status": "sold"
@@ -1739,19 +3737,57 @@ Connection can be kept alive indefinitely
         "status": "sold"
     },
     {
-        "id": 4788,
+        "id": 88,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
         "tags": [
             {
-                "id": 2350,
-                "name": "NZNQDI"
-            },
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 23,
+        "category": {
+            "id": 13,
+            "name": "dog"
+        },
+        "name": "updatedName",
+        "photoUrls": [
+            "https://image1",
+            "https://image2"
+        ],
+        "tags": [
             {
-                "id": 6035,
-                "name": "VSUVWPDRR"
-            },
+                "id": 43,
+                "name": "Good"
+            }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 8331,
+        "category": {
+            "id": 8331,
+            "name": "Brabham-Ford"
+        },
+        "name": "Brabham-Ford",
+        "photoUrls": [
+            "http://en.wikipedia.org/wiki/Brabham"
+        ],
+        "tags": [
             {
-                "id": 795,
-                "name": "RBGVC"
+                "id": 8331,
+                "name": "Brabham-Ford"
             }
         ],
         "status": "sold"
@@ -1777,3 +3813,20 @@ Connection can be kept alive indefinitely
 ]
 ## Verifying the response for find by status API for Pet for Pet Id : 1111.0, with status : sold
 ## Validation passed for find by status API for Pet for Pet Id : 1111.0
+Completed executing following method : UpdatePetsDetailsTest.findByStatusFlow
+Test Method resides in pets.UpdatePetsDetailsTest
+Test Status: Pass
+Test case :findByStatusFlow got passed
+About to end executing Test Create, Update and Find Pet Details Test Scenarios
+About to end executing Suite Pet Store - Sanity Flow
+Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+TemplateLoader.findTemplateSource("Extent.ftl"): Found
+Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/chetan/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+TemplateLoader.findTemplateSource("Extent.ftl"): Found
+Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/chetan/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+<<<<<<========onExecutionFinish==========>>>>>>>

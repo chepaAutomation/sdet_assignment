@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Pet Store - Sanity Flow">
+    
+    <listeners>
+        <listener class-name="utils.ExtentReportListener"></listener>
+    </listeners>
+
+    <test name="Create, Update and Get User Details Test Scenarios">
+        <classes>
+            <class name="users.CreateUsersTest">
+                <methods>
+                    <include name="prepareUsersDataArray"/>
+                    <include name="createUsersFlow"/>
+                </methods>
+            </class>
+            <class name="users.UpdateUserDetailsTest">
+                <methods>
+                    <include name="createSingleUsersDataFlow"/>
+                    <include name="updateUserDetailsFlow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Create, Update and Find Pet Details Test Scenarios">
+        <classes>
+            <class name="pets.CreatePetsTest">
+                <methods>
+                    <include name="createPetFlow"/>
+                </methods>
+            </class>
+            <class name="pets.UpdatePetsDetailsTest">
+                <methods>
+                    <include name="createSinglePetDataFlow"/>
+                    <include name="updatePetDetailsFlow"/>
+                    <include name="findByStatusFlow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
