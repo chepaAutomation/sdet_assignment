@@ -14,6 +14,10 @@ This project covers automation for below API's
  - Get the Pet details : /pet
  - Find the pet by status : /pet/findByStatus
 
+Framework used : 
+- testng with Java. 
+- I have used Restassured to call an API.
+
 This automation suite includes below utils
 - Logger util
 - Extent report util
