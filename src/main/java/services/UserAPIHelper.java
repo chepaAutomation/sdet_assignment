@@ -15,6 +15,15 @@ import utils.LogUtil;
 
 import java.util.Map;
 
+/***
+ * Puprpose : This class has methods to perform API Call and Response validation for Users API
+ *          : Basic Operations -
+ *          1. Create Users API (with array) Call and response validation
+ *          2. Update Users Details API Call and response validation
+ *          3. get Users API Call and validations
+ */
+
+
 public class UserAPIHelper {
     RestAssuredConfig config = CurlLoggingRestAssuredConfigFactory.createConfig();
 

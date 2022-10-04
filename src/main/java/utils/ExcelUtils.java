@@ -15,9 +15,6 @@ import java.util.Map;
 
 public class ExcelUtils {
     public static Sheet workSheet;
-    public static XSSFSheet dataSheet = null;
-
-
 
     /**
      * @param file_location : input test data file path

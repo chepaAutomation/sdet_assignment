@@ -20,6 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/***
+ * Puprpose : This class has methods to perform API Call and Response validation for Pet API
+ *          : Basic Operations -
+ *          1. Create Pet API Call and response validation
+ *          2. Update Pet Details API Call and response validation
+ *          3. get Pet API Call
+ *          4. findByStatusPetAPICall and validations
+ */
+
 public class PetAPIHelper {
 
     RestAssuredConfig config = CurlLoggingRestAssuredConfigFactory.createConfig();
